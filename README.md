@@ -1,3 +1,3 @@
 # expo-mobile-mvp
-npm install to install all the dependencies
-npm start to start the project
+<p>npm install to install all the dependencies </p>
+<p> npm start OR yarn start to start the server </p>
