@@ -23,10 +23,15 @@ function App() {
                     component={Profile}
                     options={{ title: "Profile" }}
                 />
-                <Stack.Screen name="Enter Email" component={EnterEmail} />
                 <Stack.Screen
-                    name="Enter Email Code"
+                    name="EnterEmail"
+                    component={EnterEmail}
+                    options={{ title: "Enter Email" }}
+                />
+                <Stack.Screen
+                    name="EnterEmailCode"
                     component={EnterEmailCode}
+                    options={{ title: "Enter 6-digit code" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>

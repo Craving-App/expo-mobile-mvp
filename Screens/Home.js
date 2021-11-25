@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 
 export default function Home({ navigation }) {
     return (
@@ -10,6 +10,7 @@ export default function Home({ navigation }) {
             <Text onPress={() => navigation.navigate("Profile")}>
                 Click me to view profile
             </Text>
+
             <Text onPress={() => navigation.navigate("EnterEmail")}>
                 Click to enter email
             </Text>
