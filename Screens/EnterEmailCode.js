@@ -1,8 +1,13 @@
 import React from "react";
-import { View, StyleSheet, TextInput, Alert, Button } from "react-native";
+import { View, StyleSheet, TextInput, Alert } from "react-native";
+import Button from "../components/Button";
 
 const EnterEmailCode = ({ navigation }) => {
     const [text, onChangeText] = React.useState(null);
+
+    const onPress = () => {
+        alert("pressed");
+    };
     return (
         <View style={styles.view}>
             <TextInput
@@ -12,11 +17,7 @@ const EnterEmailCode = ({ navigation }) => {
                 placeholder="Enter the 6-digit code"
                 keyboardType="numeric"
             />
-            <Button
-                color="rgba(222,33,33,0.4)"
-                title="Submit"
-                onPress={() => Alert.alert("Button pressed")}
-            />
+            <Button text="Submit" onPress={onPress} />
         </View>
     );
 };

@@ -1,8 +1,12 @@
 import React from "react";
-import { View, StyleSheet, TextInput, Button } from "react-native";
+import { View, StyleSheet, TextInput } from "react-native";
+import Button from "../components/Button";
 
 const EnterEmail = ({ navigation }) => {
     const [text, onChangeText] = React.useState(null);
+    const onPress = () => {
+        navigation.navigate("EnterEmailCode");
+    };
     return (
         <View style={styles.view}>
             <TextInput
@@ -12,11 +16,7 @@ const EnterEmail = ({ navigation }) => {
                 placeholder="Enter a valid email"
                 keyboardType="email-address"
             />
-            <Button
-                color="rgba(222,33,33,0.4)"
-                title="Submit"
-                onPress={() => navigation.navigate("EnterEmailCode")}
-            />
+            <Button text="Submit" onPress={onPress} />
         </View>
     );
 };
