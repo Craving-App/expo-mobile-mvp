@@ -31,6 +31,7 @@ const Input = ({
 const styles = StyleSheet.create({
     inputStyle: {
         height: 50,
+        borderRadius: 10,
         margin: 12,
         borderColor: "rgba(222,33,33,0.4)",
         borderWidth: 2,
