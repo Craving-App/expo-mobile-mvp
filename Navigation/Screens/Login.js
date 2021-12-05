@@ -17,7 +17,7 @@ const Login = ({ navigation }) => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image
-                    source={require('../assets/cravingslogo.png')}
+                    source={require('../../assets/cravingslogo.png')}
                     style={styles.logo}
                     resizeMode='contain'
                 />
