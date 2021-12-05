@@ -1,6 +1,7 @@
 import React from "react";
-import { View, StyleSheet, TextInput } from "react-native";
-import Button from "../components/Button";
+import { Button, View, StyleSheet } from "react-native";
+import Input from "../components/Input";
+import FlatButton from "../components/Button";
 
 const EnterEmail = ({ navigation }) => {
     const [text, onChangeText] = React.useState(null);
@@ -9,14 +10,14 @@ const EnterEmail = ({ navigation }) => {
     };
     return (
         <View style={styles.view}>
-            <TextInput
-                style={styles.input}
+            <Input
+                maxLength={20}
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="Enter a valid email"
                 keyboardType="email-address"
             />
-            <Button text="Submit" onPress={onPress} />
+            <FlatButton text="Submit" onPress={onPress} />
         </View>
     );
 };
