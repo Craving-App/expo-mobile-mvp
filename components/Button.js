@@ -1,32 +1,36 @@
-import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import React from 'react';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-const FlatButton = ({ text, onPress }) => {
-    const { button, buttonText } = styles;
-    return (
-        <TouchableOpacity onPress={onPress}>
-            <View style={button}>
-                <Text style={buttonText}>{text}</Text>
-            </View>
-        </TouchableOpacity>
-    );
-};
+// Reusable Button Component
+const Button = (props) => {
+  return (
+    // What the Text for the button would be
+          <TouchableOpacity style={styles.buttonBody} onPress={props.onPress}>
+      <Text style={styles.buttonText}>
+        {props.children}
+      </Text>
+    </TouchableOpacity>
+  )
+}
 
+
+
+// Stylesheet is
 const styles = StyleSheet.create({
-    button: {
-        borderRadius: 10,
-        paddingVertical: 14,
-        paddingHorizontal: 10,
-        margin: 12,
-        backgroundColor: "#e36d71",
-    },
-    buttonText: {
-        color: "#ffffff",
-        fontWeight: "bold",
-        textTransform: "uppercase",
-        fontSize: 16,
-        textAlign: "center",
-    },
+  buttonBody: {
+    backgroundColor: '#314D07',
+    width: '75%',
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 26,
+    fontWeight: '600'
+  }
+
 });
 
-export default FlatButton;
+export { Button };

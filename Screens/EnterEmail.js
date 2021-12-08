@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, View, StyleSheet } from "react-native";
 import Input from "../components/Input";
-import FlatButton from "../components/Button";
+import FlatButton from "../components/FlatButton";
 
 const EnterEmail = ({ navigation }) => {
     const [text, onChangeText] = React.useState(null);
