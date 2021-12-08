@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
-import {Button} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Button';
-import {Checkbox} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/CheckBox';
+import {Button} from '../components/Button';
+import {Checkbox} from '../components/CheckBox';
 
 export default function Gender ({navigation}) {
   return (

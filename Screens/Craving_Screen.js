@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
-import {Button} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Button';
-import {MenuOptions} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Dropdown';
+import {Button} from '../components/Button';
+import {MenuOptions} from '../components/Dropdown';
 
 // Make the dropdown in the center adnd button in 75% of the screen
 
