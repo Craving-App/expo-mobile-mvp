@@ -1,12 +1,13 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { View, Text, LogBox } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Screens/Home";
 import Profile from "./Screens/Profile";
 import EnterEmail from "./Screens/EnterEmail";
 import EnterEmailCode from "./Screens/EnterEmailCode";
-
+import Message from "./Screens/Message";
+import ChatList from "./Screens/ChatList";
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -32,6 +33,16 @@ function App() {
                     name="EnterEmailCode"
                     component={EnterEmailCode}
                     options={{ title: "Enter 6-digit code" }}
+                />
+                <Stack.Screen
+                    name="Message"
+                    component={Message}
+                    options={({ route }) => ({ title: route.params.name })}
+                />
+                <Stack.Screen
+                    name="ChatList"
+                    component={ChatList}
+                    options={{ title: "ChatList", headerShown: false }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
