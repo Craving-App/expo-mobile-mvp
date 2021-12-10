@@ -2,11 +2,12 @@ import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import Home from "../Navigation/Screens/Home"
-import Profile from "../Navigation/Screens/Profile"
-import Message from "../Navigation/Screens/Message"
-import Match from "../Navigation/Screens/Match"
-import Setting from "../Navigation/Screens/Setting"
+import Home from "../Screens/Home"
+import Profile from "../Screens/Profile"
+import Message from "../Screens/Message"
+import Match from "../Screens/Match"
+import Setting from "../Screens/Setting"
+
 
 // Screen Names
 const homeName = 'Home'
@@ -44,11 +45,11 @@ const MainContainer = ({navigation}) => {
                 },
             })}
         >
-            <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Messages" component={Message} />
+            <Tab.Screen name={homeName}component={Home} />
+            <Tab.Screen name={messName} component={Message} />
             <Tab.Screen name={matchName} component={Match}/>
             <Tab.Screen name={setName} component={Setting}/>
-            <Tab.Screen name="Profile" component={Profile} />
+            <Tab.Screen name={profName} component={Profile} />
         </Tab.Navigator>
     );
 };
