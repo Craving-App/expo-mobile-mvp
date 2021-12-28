@@ -2,18 +2,18 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
-import {Button} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Button';
-import {MenuOptions} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Dropdown';
-
-// Make the dropdown in the center adnd button in 75% of the screen
+import {Button} from '../components/Button';
+import {Checkbox} from '../components/Checkbox'';
 
 export default function Craving ({navigation}) {
-    var answers = ["Long term Relationship", "Hookups", "Casual Dates", "I'm not sure yet"]
   return (
     <View style={styles.container}>
-        <Text style={styles.question}>Who are you craving ?  </Text>
+        <Text style={styles.question}> What are you craving ?  </Text>
         <View style={styles.container2}>
-          <MenuOptions arr={answers}></MenuOptions>
+          <Checkbox answer = 'Long term Relationship'/>
+          <Checkbox answer = 'Hookups'/>
+          <Checkbox answer = 'Casual Dates'/>
+          <Checkbox answer = "I'm not sure yet"/>
         </View>
           <View style={styles.container3}>
             <Button onPress={() => navigation.navigate("Value")}>
@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
   question: {
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: 25
+    fontSize: 25,
+    paddingBottom: 20
   },
  container2: {
    flex: 20,

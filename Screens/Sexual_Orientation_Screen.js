@@ -2,19 +2,21 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 // import componets from local files
-import {Button} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Button';
-import {MenuOptions} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Dropdown';
+import {Button} from '../components/Button';
+import {Checkbox} from '../components/Checkbox'';
 
 export default function Orientation ({ navigation }) {
     
-    // Choices for the dropdown for this specific screen
-    var choices = [ "Straight", "Gay","Lesbian", "Bisexual","Asexual", "Pansexual", "Queer"];
     return (
             <View style={styles.container}>
                 <Text style={styles.question}> What is your sexual orientation ? </Text>
-            <View style={styles.containerMenu}>
-                <MenuOptions arr={choices} ></MenuOptions>
-            </View>
+                <Checkbox answer = 'Straight'/>
+                <Checkbox answer = 'Gay'/>
+                <Checkbox answer = 'Lesbian'/>
+                <Checkbox answer = "Bisexual"/>
+                <Checkbox answer = "Asexual"/>
+                <Checkbox answer = "Pansexual"/>
+                <Checkbox answer = "Queer"/>
             <View style={styles.containerButton}>
                 <Button onPress={() => navigation.navigate("Match")}>
                 Continue
@@ -38,11 +40,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25
   },
-  containerMenu: {
-     justifyContent: 'center',
-     alignItems: 'center',
-     flex: 4
- },
 containerButton: {
     flex: 4,
     justifyContent: 'center',

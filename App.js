@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Screens/Home";
 import Craving from "./Screens/Craving_Screen";
 import Value from "./Screens/Values_Screen";
-import Match from "./Screens/Math_Gender";
+import Match from "./Screens/Match_Gender";
 import Orientation from "./Screens/Sexual_Orientation_Screen";
 
 

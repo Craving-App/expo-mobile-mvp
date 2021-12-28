@@ -2,18 +2,18 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
-import {Button} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/Button';
-import {Checkbox} from '/Users/sanzi/Desktop/expo-mobile-mvp/components/CheckBox';
+import {Button} from '../components/Button';
+import {Checkbox} from '../components/Checkbox'';
 
 export default function Gender ({navigation}) {
   return (
     <View style={styles.container}>
         <Text style={styles.question}> Who are you looking for ? </Text>
           <View style={styles.container2}>
-            <Checkbox answer = 'Cis Male' description= 'born male, identifies as male'/>
-            <Checkbox answer = 'Cis Female' description= 'born female, identifies as female'/>
-            <Checkbox answer = 'Nonbinary' description= 'does not identify as male or female'/>
-            <Checkbox answer = 'Queer' description= "Umbrella term for anyone else that isn't cisgender"/>
+            <Checkbox pad= '10' answer = 'Cis Male' description= 'born male, identifies as male'/>
+            <Checkbox pad= '10'answer = 'Cis Female' description= 'born female, identifies as female'/>
+            <Checkbox pad= '10'answer = 'Nonbinary' description= 'does not identify as male or female'/>
+            <Checkbox pad= '10' answer = 'Queer' description= "Umbrella term for anyone else that isn't cisgender"/>
           </View>
           <View style={styles.container3}>
           <Button onPress={() => navigation.navigate("Craving")}>
