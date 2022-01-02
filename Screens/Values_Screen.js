@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet, SafeAreaView, ScrollView, StatusBar } from 'react-native';
 // You can import from local files
 import {Button} from '../components/Button';
-import {Checkbox} from '../components/Checkbox'';
+import {Checkbox} from '../components/Checkbox';
 
 export default function Values ({navigation}) {
     

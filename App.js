@@ -7,6 +7,7 @@ import Craving from "./Screens/Craving_Screen";
 import Value from "./Screens/Values_Screen";
 import Match from "./Screens/Match_Gender";
 import Orientation from "./Screens/Sexual_Orientation_Screen";
+import About from "./Screens/About_Me";
 
 
 const Stack = createNativeStackNavigator();
@@ -39,6 +40,11 @@ function App() {
             name="Orientation"
             component={Orientation}
             options={{ title: "Orientation" }}
+          />
+          <Stack.Screen
+            name="About"
+            component={About}
+            options={{ title: "About" }}
           />
       </Stack.Navigator>
     </NavigationContainer>
