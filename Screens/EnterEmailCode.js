@@ -1,13 +1,20 @@
 import React from "react";
-import { View, StyleSheet, Alert, Button } from "react-native";
-import Input from "../components/Input";
-import FlatButton from "../components/Button";
+import { View, StyleSheet, Alert } from "react-native";
+import { Input } from "../components/Input";
+import { FlatButton } from "../components/FlatButton";
 
 const EnterEmailCode = ({ navigation }) => {
     const [text, onChangeText] = React.useState(null);
-
     const onPress = () => {
-        Alert.alert("pressed");
+        if (text === null) {
+            Alert.alert("Error! Enter code!");
+            return;
+        } else if (!text.trim()) {
+            Alert.alert("Error! Enter code!");
+            return;
+        } else {
+            Alert.alert("Success");
+        }
     };
     return (
         <View style={styles.view}>
