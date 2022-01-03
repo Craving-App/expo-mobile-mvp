@@ -3,7 +3,13 @@ import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
 import {Button} from '../components/Button';
+<<<<<<< HEAD
 import {Checkbox} from '../components/Checkbox';
+=======
+import {MenuOptions} from '../components/Dropdown';
+
+// Make the dropdown in the center adnd button in 75% of the screen
+>>>>>>> ba727a5d914b1796e984e3409262030e717f0e28
 
 export default function Craving ({navigation}) {
   return (

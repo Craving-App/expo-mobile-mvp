@@ -3,7 +3,11 @@ import { Text, View, StyleSheet } from 'react-native';
 
 // import componets from local files
 import {Button} from '../components/Button';
+<<<<<<< HEAD
 import {Checkbox} from '../components/Checkbox';
+=======
+import {MenuOptions} from '../components/Dropdown';
+>>>>>>> ba727a5d914b1796e984e3409262030e717f0e28
 
 export default function Orientation ({ navigation }) {
     

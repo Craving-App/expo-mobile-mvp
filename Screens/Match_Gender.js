@@ -3,7 +3,11 @@ import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
 import {Button} from '../components/Button';
+<<<<<<< HEAD:Screens/Match_Gender.js
 import {Checkbox} from '../components/Checkbox';
+=======
+import {Checkbox} from '../components/CheckBox';
+>>>>>>> ba727a5d914b1796e984e3409262030e717f0e28:Screens/Math_Gender.js
 
 export default function Gender ({navigation}) {
   return (
