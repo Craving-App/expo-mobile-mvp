@@ -3,21 +3,18 @@ import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
 import {Button} from '../components/Button';
-<<<<<<< HEAD:Screens/Match_Gender.js
 import {Checkbox} from '../components/Checkbox';
-=======
-import {Checkbox} from '../components/CheckBox';
->>>>>>> ba727a5d914b1796e984e3409262030e717f0e28:Screens/Math_Gender.js
+
 
 export default function Gender ({navigation}) {
   return (
     <View style={styles.container}>
         <Text style={styles.question}> Who are you looking for ? </Text>
           <View style={styles.container2}>
-            <Checkbox pad= '10' answer = 'Cis Male' description= 'born male, identifies as male'/>
-            <Checkbox pad= '10'answer = 'Cis Female' description= 'born female, identifies as female'/>
-            <Checkbox pad= '10'answer = 'Nonbinary' description= 'does not identify as male or female'/>
-            <Checkbox pad= '10' answer = 'Queer' description= "Umbrella term for anyone else that isn't cisgender"/>
+            <Checkbox answer = 'Cis Male' description= 'born male, identifies as male'/>
+            <Checkbox answer = 'Cis Female' description= 'born female, identifies as female'/>
+            <Checkbox answer = 'Nonbinary' description= 'does not identify as male or female'/>
+            <Checkbox answer = 'Queer' description= "Umbrella term for anyone else that isn't cisgender"/>
           </View>
           <View style={styles.container3}>
           <Button onPress={() => navigation.navigate("About")}>
