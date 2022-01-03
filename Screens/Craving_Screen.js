@@ -18,6 +18,7 @@ export default function Craving ({navigation}) {
           <View style={styles.containerButton}>
             <Button onPress={() => navigation.navigate("Value")}>
             </Button>
+          </View>
       </View>
   );
 }
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#FFC3A9',
-    paddingTop: 65,
+    paddingTop: 65
   },
   question: {
     textAlign: 'center',
@@ -44,4 +45,5 @@ containerButton: {
   flex: 20,
   justifyContent: 'center',
   alignItems: 'center'
+}
 });

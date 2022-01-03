@@ -23,7 +23,7 @@ function Checkbox(props) {
             <Text style={styles.textBody}>
                 {props.answer}
             </Text>
-            <Text style={styles.textBodys}>
+            <Text style={styles.descriptionBody}>
               {props.description}
             </Text>
           </View>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 5,
   },
-  textBodys: {
+  descriptionBody: {
     color: 'grey',
     fontSize: 11,
     textAlign: 'center',

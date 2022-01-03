@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-// import componets from local files
+
 import {Button} from '../components/Button';
 import {Checkbox} from '../components/Checkbox';
 
@@ -27,7 +27,7 @@ export default function Orientation ({ navigation }) {
 }
 
 
-// Style sheet for screen
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
