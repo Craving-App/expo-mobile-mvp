@@ -1,32 +1,24 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
 
-// You can import from local files
+import { SafeAreaView,ScrollView, Text, View, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+
 import {Button} from '../components/Button';
-<<<<<<< HEAD
 import {Checkbox} from '../components/Checkbox';
-=======
-import {MenuOptions} from '../components/Dropdown';
-
-// Make the dropdown in the center adnd button in 75% of the screen
->>>>>>> ba727a5d914b1796e984e3409262030e717f0e28
 
 export default function Craving ({navigation}) {
   return (
     <View style={styles.container}>
         <Text style={styles.question}> What are you craving ?  </Text>
         <View style={styles.container2}>
-          <Checkbox answer = 'Long term Relationship'/>
+          <Checkbox answer = 'Long Term Relationship'/>
           <Checkbox answer = 'Hookups'/>
           <Checkbox answer = 'Casual Dates'/>
           <Checkbox answer = "I'm not sure yet"/>
         </View>
-          <View style={styles.container3}>
+          <View style={styles.containerButton}>
             <Button onPress={() => navigation.navigate("Value")}>
-              Continue
             </Button>
-          </View>
-    </View>
+      </View>
   );
 }
 
@@ -48,10 +40,8 @@ const styles = StyleSheet.create({
    justifyContent: 'center',
    alignItems: 'center'
 },
-container3: {
+containerButton: {
   flex: 20,
   justifyContent: 'center',
   alignItems: 'center'
-},
 });
-
