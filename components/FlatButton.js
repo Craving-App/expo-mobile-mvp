@@ -29,4 +29,5 @@ const styles = StyleSheet.create({
     },
 });
 
-export default FlatButton;
+// export default FlatButton;
+export { FlatButton };
