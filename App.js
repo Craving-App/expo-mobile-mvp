@@ -14,6 +14,9 @@ import EnterEmail from "./Screens/EnterEmail";
 import EnterEmailCode from "./Screens/EnterEmailCode";
 import Message from "./Screens/Message";
 import ChatList from "./Screens/ChatList";
+import NameQuestion from "./Screens/NameQuestion";
+import GenderQuestion from "./Screens/GenderQuestion";
+import AgeQuestion from "./Screens/AgeQuestion";
 
 
 import MainContainer from "./Navigation/MainContainer";
@@ -68,6 +71,21 @@ function App() {
                     name="Orientation"
                     component={Orientation}
                     options={{ title: "Orientation" }}
+                />
+                <Stack.Screen
+                    name="Name"
+                    component={NameQuestion}
+                    options={{ title: "Name" }}
+                />
+                <Stack.Screen
+                    name="Gender"
+                    component={GenderQuestion}
+                    options={{ title: "Gender" }}
+                />
+                <Stack.Screen
+                    name="Age"
+                    component={AgeQuestion}
+                    options={{ title: "Age" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
