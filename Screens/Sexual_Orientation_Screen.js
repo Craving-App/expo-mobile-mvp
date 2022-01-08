@@ -13,7 +13,7 @@ export default function Orientation ({ navigation }) {
             <View style={styles.container}>
                 <Text style={styles.question}> What is your sexual orientation ? </Text>
             <View style={styles.containerMenu}>
-                <MenuOptions arr={choices} ></MenuOptions>
+                <MenuOptions arr={choices}/>
             </View>
             <View style={styles.containerButton}>
                 <Button onPress={() => navigation.navigate("Match")}>
