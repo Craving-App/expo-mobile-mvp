@@ -3,7 +3,8 @@ import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
 import {Button} from '../components/Button';
-import {Checkbox} from '../components/CheckBox';
+import {Checkbox} from '../components/Checkbox';
+
 
 export default function Gender ({navigation}) {
   return (
@@ -16,7 +17,7 @@ export default function Gender ({navigation}) {
             <Checkbox answer = 'Queer' description= "Umbrella term for anyone else that isn't cisgender"/>
           </View>
           <View style={styles.container3}>
-          <Button onPress={() => navigation.navigate("Craving")}>
+          <Button onPress={() => navigation.navigate("About")}>
             Continue
           </Button>
         </View>

@@ -1,20 +1,30 @@
-import React, {useState} from "react";
-import {Text, StyleSheet, Picker, View, TouchableOpacity} from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
-// Component for a multi-select checkbox with parameter
 
-const Checkbox = (props) => {
+function Checkbox(props) {
+    
+    // Component for a multi-select checkbox with parameter
+    const [checked, onChange] = useState(false);
+    
+    function onCheckedMarked() {
+      onChange(!checked);
+    }
   return (
-    <View style={styles.container}>
-      <View style={styles.containerLeft}>
-        <TouchableOpacity style={styles.square}>
-        </TouchableOpacity>
+          <View style={styles.container}>
+                <View style={styles.containerLeft}>
+                  <Pressable
+                    style={[styles.square, checked && styles.checkedBox]}
+                    onPress={onCheckedMarked}>
+                    {checked && <Ionicons name="checkmark" size={20} color="white" />}
+                  </Pressable>
           <View style={{ flex: 1 }} >
             <Text style={styles.textBody}>
                 {props.answer}
             </Text>
-            <Text style={styles.textBodys}>
-                {props.description}
+            <Text style={styles.descriptionBody}>
+              {props.description}
             </Text>
           </View>
       </View>
@@ -22,28 +32,21 @@ const Checkbox = (props) => {
   )
 }
 
-/*
- padding: 10,
- borderRadius: 10,
- alignItems: 'center',
- justifyContent: 'space-between',
- marginTop: 30,
- marginBottom: 10
- */
+
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#FFF',
     alignItems: 'center',
-    borderRadius: 40,
+    borderRadius: 30,
     justifyContent: 'space-between',
     marginTop: 15,
-    padding: 15,
+    padding: 9
   },
   containerLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   square: {
     width: 24,
@@ -51,19 +54,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
     opacity: 0.4,
     borderRadius: 5,
-    marginRight: 10
+    marginLeft: 10
   },
   textBody: {
     color: 'black',
     fontSize: 16,
     textAlign: 'center',
-    paddingTop: 5
+    paddingTop: 5,
   },
-  textBodys: {
+  descriptionBody: {
     color: 'grey',
     fontSize: 11,
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 });
 
 export {Checkbox};

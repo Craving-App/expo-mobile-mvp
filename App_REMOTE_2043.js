@@ -6,9 +6,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Screens/Home";
 import Craving from "./Screens/Craving_Screen";
 import Value from "./Screens/Values_Screen";
-import MatchPreference from "./Screens/Match_Gender";
+import Match from "./Screens/Math_Gender";
 import Orientation from "./Screens/Sexual_Orientation_Screen";
-import About from "./Screens/About_Me";
 import Profile from "./Screens/Profile";
 import Login from "./Screens/Login";
 import EnterEmail from "./Screens/EnterEmail";
@@ -18,6 +17,9 @@ import ChatList from "./Screens/ChatList";
 import NameQuestion from "./Screens/NameQuestion";
 import GenderQuestion from "./Screens/GenderQuestion";
 import AgeQuestion from "./Screens/AgeQuestion";
+
+
+import MainContainer from "./Navigation/MainContainer";
 
 const Stack = createNativeStackNavigator();
 
@@ -71,11 +73,6 @@ function App() {
                     options={{ title: "Orientation" }}
                 />
                 <Stack.Screen
-                  name="MatchPreference"
-                  component={MatchPreference}
-                  options={{ title: "MatchPreference" }}
-                />
-                <Stack.Screen
                     name="Name"
                     component={NameQuestion}
                     options={{ title: "Name" }}
@@ -89,11 +86,6 @@ function App() {
                     name="Age"
                     component={AgeQuestion}
                     options={{ title: "Age" }}
-                />
-                <Stack.Screen
-                  name="About"
-                  component={About}
-                options={{ title: "About" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
