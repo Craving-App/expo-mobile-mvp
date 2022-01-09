@@ -13,6 +13,7 @@ import EnterEmail from "./Screens/EnterEmail";
 import EnterEmailCode from "./Screens/EnterEmailCode";
 import Message from "./Screens/Message";
 import ChatList from "./Screens/ChatList";
+import Interests from "./Screens/Interests";
 
 const Stack = createNativeStackNavigator();
 
@@ -74,6 +75,11 @@ function App() {
                     name="Orientation"
                     component={Orientation}
                     options={{ title: "Orientation" }}
+                />
+                <Stack.Screen
+                    name="Interests"
+                    component={Interests}
+                    options={{ title: "Interests" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
