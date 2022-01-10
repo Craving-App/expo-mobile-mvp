@@ -40,49 +40,6 @@ function App() {
                     component={Login}
                     options={{title: "Login"}}
                 />
-
-                {/*{*/}
-                {/*    isLoggedIn ? (*/}
-                {/*        <Stack.Screen*/}
-                {/*            name="MainContainer"*/}
-                {/*            component={MainContainer}*/}
-                {/*            options={{title: "Home"}}*/}
-                {/*        />*/}
-                {/*    ) : (*/}
-                {/*        <>*/}
-
-                {/*        </>*/}
-                {/*    )*/}
-                {/*}*/}
-
-                {/*<Stack.Screen*/}
-                {/*    name="EnterEmail"*/}
-                {/*    component={EnterEmail}*/}
-                {/*    options={{ title: "Enter Email" }}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="EnterEmailCode"*/}
-                {/*    component={EnterEmailCode}*/}
-                {/*    options={{ title: "Enter 6-digit code" }}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="Message"*/}
-                {/*    component={Message}*/}
-                {/*    initialParams={{ name: "Message" }}*/}
-                {/*    // options={({ route }) => ({ title: route.params.name })}*/}
-                {/*/>*/}
-                {/*<Stack.Screen*/}
-                {/*    name="ChatList"*/}
-                {/*    component={ChatList}*/}
-                {/*    options={{ title: "ChatList", headerShown: false }}*/}
-                {/*/>*/}
-                {/*<Stack.Group screenOptions={{ presentation: 'modal'}}>*/}
-                {/*    <Stack.Screen*/}
-                {/*        name="Value"*/}
-                {/*        component={Value}*/}
-                {/*        options={{ title: "Value" }}*/}
-                {/*    />*/}
-                {/*</Stack.Group>*/}
             </Stack.Navigator>
         </NavigationContainer>
 
