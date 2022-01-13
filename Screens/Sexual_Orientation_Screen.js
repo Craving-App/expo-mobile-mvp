@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-
 import {Button} from '../components/Button';
-import {Checkbox} from '../components/Checkbox';
+import {Checkbox} from '../components/CheckBox';
+
+import Craving from "./Craving_Screen";
 
 export default function Orientation ({ navigation }) {
-    
     return (
             <View style={styles.container}>
                 <Text style={styles.question}> What is your sexual orientation ? </Text>
@@ -17,16 +17,15 @@ export default function Orientation ({ navigation }) {
                 <Checkbox answer = "Asexual"/>
                 <Checkbox answer = "Pansexual"/>
                 <Checkbox answer = "Queer"/>
+
             <View style={styles.containerButton}>
-                <Button onPress={() => navigation.navigate("Match_Gender")}>
+                <Button onPress={() => navigation.navigate("Craving")}>
                 Continue
                 </Button>
             </View>
             </View>
             );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {

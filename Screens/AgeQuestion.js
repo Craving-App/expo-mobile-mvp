@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import {Button} from '../components/Button';
 
-
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-export default function AgeQuestion() { 
+import GenderQuestion from "./GenderQuestion";
+
+export default function AgeQuestion({navigation}) {
     const [age, setAge] = useState(18);
     const [haveAge, setHaveAge] = useState(false); 
      const [date, setDate] = useState(new Date("December 31, 2002 00:00:00"));
@@ -27,7 +28,7 @@ export default function AgeQuestion() {
         setHaveAge(false)
     }
     const onPress = () => {
-        if (haveAge) navigation.navigate("Gender");
+        if (haveAge) navigation.navigate("GenderQuestion");
         setHaveAge(true);
     };
  

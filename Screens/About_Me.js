@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Text, View, StyleSheet, TextInput } from 'react-native';
 
 
-export default function Craving ({navigation}) {
+export default function AboutMe ({navigation}) {
   return (
     <View style={styles.container}>
           
           <TextInput
             style={styles.inputText}
             keyboardType='default'
-            multiline=true
+            multiline={true}
             placeholder="Tell us about yourself..."
           />
     </View>
@@ -30,4 +30,5 @@ const styles = StyleSheet.create({
         padding: 10
     }
 });
+
 
