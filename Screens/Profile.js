@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View} from "react-native";
+import data from '../components/data';
+import CarouselSlider from "../components/CarouselSlider";
 
 export default function Profile({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-            <Text>Hello Profile!</Text>
+             <CarouselSlider data={data} />
         </View>
     );
 }
