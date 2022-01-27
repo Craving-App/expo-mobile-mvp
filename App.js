@@ -15,6 +15,7 @@ import EnterEmail from "./Screens/EnterEmail";
 import EnterEmailCode from "./Screens/EnterEmailCode";
 import Message from "./Screens/Message";
 import ChatList from "./Screens/ChatList";
+import Interests from "./Screens/Interests";
 
 import SplashScreen from "./Screens/SplashScreen";
 
@@ -90,6 +91,11 @@ function App() {
                     name="Profile"
                     component={Profile}
                     options={{ title: "Profile" }}
+                />
+                <Stack.Screen
+                    name="Interests"
+                    component={Interests}
+                    options={{ title: "Interests" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
