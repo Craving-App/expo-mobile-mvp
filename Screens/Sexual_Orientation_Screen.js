@@ -3,8 +3,8 @@ import { Text, View, StyleSheet } from 'react-native';
 
 import {Button} from '../components/Button';
 import {Checkbox} from '../components/CheckBox';
-
 import Craving from "./Craving_Screen";
+
 
 export default function Orientation ({ navigation }) {
     return (
