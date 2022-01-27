@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet, SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
 import {Button} from '../components/Button';
-import {Checkbox} from '../components/Checkbox';
+import {Checkbox} from '../components/CheckBox';
 
 export default function Values ({navigation}) {
     

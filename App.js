@@ -27,7 +27,7 @@ function App() {
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen
                     name="Home"
-                    component={MainContainer}
+                    component={Home}
                     options={{ title: "Home" }}
                 />
                 <Stack.Screen
@@ -71,9 +71,9 @@ function App() {
                     options={{ title: "Orientation" }}
                 />
                 <Stack.Screen
-                  name="MatchPreference"
-                  component={MatchPreference}
-                  options={{ title: "MatchPreference" }}
+                    name="MatchPreference"
+                    component={MatchPreference}
+                    options={{ title: "MatchPreference" }}
                 />
                 <Stack.Screen
                     name="Name"
@@ -91,9 +91,14 @@ function App() {
                     options={{ title: "Age" }}
                 />
                 <Stack.Screen
-                  name="About"
-                  component={About}
-                options={{ title: "About" }}
+                    name="About"
+                    component={About}
+                    options={{ title: "About" }}
+                />
+                <Stack.Screen
+                    name="Profile"
+                    component={Profile}
+                    options={{ title: "Profile" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>

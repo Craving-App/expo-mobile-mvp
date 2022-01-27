@@ -17,9 +17,9 @@ export default function Home({ navigation }) {
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
-            <Text>Home Page</Text>
+            <Text>Home Page{"\n"}{"\n"}</Text>
             <Text onPress={() => navigation.navigate("Profile")}>
-                Click me to view profile
+                Click me to view profile{"\n"}{"\n"}
             </Text>
 
             <Text onPress={() => navigation.navigate("EnterEmail")}>

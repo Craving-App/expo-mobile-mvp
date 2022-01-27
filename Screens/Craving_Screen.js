@@ -3,7 +3,7 @@ import { SafeAreaView,ScrollView, Text, View, StyleSheet } from 'react-native';
 import React, { useState } from "react";
 
 import {Button} from '../components/Button';
-import {Checkbox} from '../components/Checkbox';
+import {Checkbox} from '../components/CheckBox';
 
 export default function Craving ({navigation}) {
   return (

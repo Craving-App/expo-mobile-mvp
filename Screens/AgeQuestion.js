@@ -8,7 +8,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 export default function AgeQuestion() { 
     const [age, setAge] = useState(18);
     const [haveAge, setHaveAge] = useState(false); 
-     const [date, setDate] = useState(new Date("December 31, 2002 00:00:00"));
+    const [date, setDate] = useState(new Date("December 31, 2002 00:00:00"));
     const [show, setShow] = useState(false);
     const getAge = dateInput => { //Calculates age based on input as year/month/day 
         const today = new Date();
@@ -50,7 +50,7 @@ export default function AgeQuestion() {
          onChange={onChange}
          mode={date}
          maximumDate={new Date("December 31, 2002 00:00:00")}
-         minimumDate={new Date("December 31, 1930 00:00:00")}
+         minimumDate={new Date("December 31, 1920 00:00:00")}
        />}
        {haveAge == true && <Text style={styles.popupInput}>{`You are ${age} years old`}</Text>}
               </View>
