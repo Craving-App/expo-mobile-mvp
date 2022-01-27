@@ -10,16 +10,12 @@ export default function Orientation ({ navigation }) {
     return (
             <View style={styles.container}>
                 <Text style={styles.question}> What is your sexual orientation ? </Text>
-                <Checkbox answer = 'Straight'/>
-                <Checkbox answer = 'Gay'/>
-                <Checkbox answer = 'Lesbian'/>
-                <Checkbox answer = "Bisexual"/>
-                <Checkbox answer = "Asexual"/>
-                <Checkbox answer = "Pansexual"/>
-                <Checkbox answer = "Queer"/>
+            <View style={styles.containerMenu}>
+                <MenuOptions arr={choices}/>
+            </View>
             <View style={styles.containerButton}>
                 <Button onPress={() => navigation.navigate("Match_Gender")}>
-                Continue
+                  Continue
                 </Button>
             </View>
             </View>

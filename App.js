@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Screens/Home";
 import Craving from "./Screens/Craving_Screen";
 import Value from "./Screens/Values_Screen";
-import MatchPreference from "./Screens/Match_Gender";
+import Match from "./Screens/Math_Gender";
 import Orientation from "./Screens/Sexual_Orientation_Screen";
 import About from "./Screens/About_Me";
 import Profile from "./Screens/Profile";
@@ -15,9 +15,15 @@ import EnterEmail from "./Screens/EnterEmail";
 import EnterEmailCode from "./Screens/EnterEmailCode";
 import Message from "./Screens/Message";
 import ChatList from "./Screens/ChatList";
+
+import SplashScreen from "./Screens/SplashScreen";
+
 import NameQuestion from "./Screens/NameQuestion";
 import GenderQuestion from "./Screens/GenderQuestion";
 import AgeQuestion from "./Screens/AgeQuestion";
+
+import OnBoarding from "./Screens/OnBoarding";
+import MainContainer from "./Navigation/MainContainer";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,7 +33,7 @@ function App() {
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen
                     name="Home"
-                    component={Home}
+                    component={MainContainer}
                     options={{ title: "Home" }}
                 />
                 <Stack.Screen
@@ -41,34 +47,19 @@ function App() {
                     options={{ title: "Enter 6-digit code" }}
                 />
                 <Stack.Screen
-                    name="Message"
-                    component={Message}
-                    options={({ route }) => ({ title: route.params.name })}
+                    name="SplashScreen"
+                    component={SplashScreen}
+                    options={{title: "SplashScreen", headerShown: false}}
                 />
                 <Stack.Screen
-                    name="ChatList"
-                    component={ChatList}
-                    options={{ title: "ChatList", headerShown: false }}
+                    name="OnBoarding"
+                    component={OnBoarding}
+                    options={{title: "On Boarding", headerShown: false}}
                 />
                 <Stack.Screen
                     name="Login"
                     component={Login}
-                    options={{ title: "Login", headerShown: false }}
-                />
-                <Stack.Screen
-                    name="Craving"
-                    component={Craving}
-                    options={{ title: "Craving" }}
-                />
-                <Stack.Screen
-                    name="Value"
-                    component={Value}
-                    options={{ title: "Value" }}
-                />
-                <Stack.Screen
-                    name="Orientation"
-                    component={Orientation}
-                    options={{ title: "Orientation" }}
+                    options={{title: "Login"}}
                 />
                 <Stack.Screen
                     name="MatchPreference"
@@ -102,6 +93,7 @@ function App() {
                 />
             </Stack.Navigator>
         </NavigationContainer>
+
     );
 }
 

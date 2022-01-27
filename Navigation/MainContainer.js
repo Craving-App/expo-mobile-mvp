@@ -8,7 +8,6 @@ import Message from "../Screens/Message"
 import Match from "../Screens/Match"
 import Setting from "../Screens/Setting"
 
-
 // Screen Names
 const homeName = 'Home'
 const messName = 'Messages'
@@ -45,8 +44,8 @@ const MainContainer = ({navigation}) => {
                 },
             })}
         >
-            <Tab.Screen name={homeName}component={Home} />
-            <Tab.Screen name={messName} component={Message} />
+            <Tab.Screen name={homeName} component={Home} />
+            <Tab.Screen name={messName} component={Message} initialParams={{ name: "Message" }}/>
             <Tab.Screen name={matchName} component={Match}/>
             <Tab.Screen name={setName} component={Setting}/>
             <Tab.Screen name={profName} component={Profile} />
