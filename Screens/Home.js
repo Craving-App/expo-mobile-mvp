@@ -2,30 +2,30 @@ import React from "react";
 import { View, StyleSheet,TouchableOpacity,Text } from "react-native";
 
 export default function Home({ navigation }) {
-// <<<<<<< HEAD
-//   return (
-//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-//       <Text style={{ textAlign: "center",  fontSize: 16, fontWeight: 'bold'}}>Success!</Text>
-//       <Text style={{ textAlign: "center", padding: 40}}>Onboarding all completed, get mingling.</Text>
-//       <TouchableOpacity onPress={() => alert('You clicked the success button!')} style={styles.button}>
-//         <Text style={styles.buttonText} >Get Started</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-// =======
     return (
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
-            <Text>Home Page</Text>
+            <Text>Home Page{"\n"}{"\n"}</Text>
             <Text onPress={() => navigation.navigate("Profile")}>
-                Click me to view profile
+                Click me to view profile{"\n"}{"\n"}
             </Text>
 
             <Text onPress={() => navigation.navigate("EnterEmail")}>
-                Click to enter email
+                Click to enter email{"\n"}{"\n"}
             </Text>
-            
+
+            <Text onPress={() => navigation.navigate("EnterEmailCode")}>
+                Click to enter email code{"\n"}{"\n"}
+            </Text>
+
+            <Text onPress={() => navigation.navigate("Values")}>
+                Click to get to value screen{"\n"}{"\n"}
+            </Text>
+
+            <Text onPress={() => navigation.navigate("ChatList")}>
+                Click to get to chatlist screen{"\n"}{"\n"}
+            </Text>
             
         </View>
     );

@@ -19,7 +19,6 @@ const EnterEmail = ({ navigation }) => {
     return (
         <View style={styles.view}>
             <Input
-                maxLength={20}
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="Enter a valid email"
