@@ -9,7 +9,7 @@ export default function Craving ({navigation}) {
           <TextInput
             style={styles.inputText}
             keyboardType='default'
-            multiline=true
+            multiline={true}
             placeholder="Tell us about yourself..."
           />
     </View>
