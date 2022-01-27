@@ -5,13 +5,13 @@ import { Text, View, StyleSheet, TextInput } from 'react-native';
 export default function Craving ({navigation}) {
   return (
     <View style={styles.container}>
-          
+{/*           
           <TextInput
             style={styles.inputText}
             keyboardType='default'
             multiline={true}
             placeholder="Tell us about yourself..."
-          />
+          /> */}
     </View>
   );
 }
