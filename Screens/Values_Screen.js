@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, SafeAreaView, ScrollView, StatusBar } from 'react-native';
-// You can import from local files
+
 import {Button} from '../components/Button';
 import {Checkbox} from '../components/CheckBox';
 
 export default function Values ({navigation}) {
     
-    // Make the screen scrollable
+
     
   return (
     <SafeAreaView style={styles.container}>

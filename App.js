@@ -7,7 +7,8 @@ import Home from "./Screens/Home";
 import Craving from "./Screens/Craving_Screen";
 import Value from "./Screens/Values_Screen";
 import Match from "./Screens/Math_Gender";
-
+import Orientation from "./Screens/Sexual_Orientation_Screen";
+import About from "./Screens/About_Me";
 import Profile from "./Screens/Profile";
 import Login from "./Screens/Login";
 import EnterEmail from "./Screens/EnterEmail";
@@ -21,7 +22,6 @@ import NameQuestion from "./Screens/NameQuestion";
 import GenderQuestion from "./Screens/GenderQuestion";
 import AgeQuestion from "./Screens/AgeQuestion";
 
-
 import OnBoarding from "./Screens/OnBoarding";
 import MainContainer from "./Navigation/MainContainer";
 
@@ -30,7 +30,22 @@ const Stack = createNativeStackNavigator();
 function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen
+                    name="Home"
+                    component={MainContainer}
+                    options={{ title: "Home" }}
+                />
+                <Stack.Screen
+                    name="EnterEmail"
+                    component={EnterEmail}
+                    options={{ title: "Enter Email" }}
+                />
+                <Stack.Screen
+                    name="EnterEmailCode"
+                    component={EnterEmailCode}
+                    options={{ title: "Enter 6-digit code" }}
+                />
                 <Stack.Screen
                     name="SplashScreen"
                     component={SplashScreen}
@@ -47,6 +62,11 @@ function App() {
                     options={{title: "Login"}}
                 />
                 <Stack.Screen
+                    name="MatchPreference"
+                    component={MatchPreference}
+                    options={{ title: "MatchPreference" }}
+                />
+                <Stack.Screen
                     name="Name"
                     component={NameQuestion}
                     options={{ title: "Name" }}
@@ -60,6 +80,16 @@ function App() {
                     name="Age"
                     component={AgeQuestion}
                     options={{ title: "Age" }}
+                />
+                <Stack.Screen
+                    name="About"
+                    component={About}
+                    options={{ title: "About" }}
+                />
+                <Stack.Screen
+                    name="Profile"
+                    component={Profile}
+                    options={{ title: "Profile" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
