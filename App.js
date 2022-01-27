@@ -3,8 +3,11 @@ import { View, Text, LogBox } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import MatchPreference from "./Screens/Match_Gender";
 import Login from "./Screens/Login";
+import EnterEmail from "./Screens/EnterEmail";
+import EnterEmailCode from "./Screens/EnterEmailCode";
+import Values from "./Screens/Values_Screen";
+import ChatList from "./Screens/ChatList";
 
 import SplashScreen from "./Screens/SplashScreen";
 import OnBoarding from "./Screens/OnBoarding";
@@ -15,17 +18,7 @@ const Stack = createNativeStackNavigator();
 function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen
-                    name="Home"
-                    component={Home}
-                    options={{ title: "Home" }}
-                />
-                <Stack.Screen
-                    name="EnterEmail"
-                    component={EnterEmail}
-                    options={{ title: "Enter Email" }}
-                />
+            <Stack.Navigator initialRouteName="SplashScreen">
                 <Stack.Screen
                     name="SplashScreen"
                     component={SplashScreen}
@@ -47,34 +40,24 @@ function App() {
                     options={{title: "MainContainer"}}
                 />
                 <Stack.Screen
-                    name="MatchPreference"
-                    component={MatchPreference}
-                    options={{ title: "MatchPreference" }}
+                    name="EnterEmail"
+                    component={EnterEmail}
+                    options={{ title: "Enter Email" }}
                 />
                 <Stack.Screen
-                    name="Name"
-                    component={NameQuestion}
-                    options={{ title: "Name" }}
+                    name="EnterEmailCode"
+                    component={EnterEmailCode}
+                    options={{ title: "Enter 6-digit code" }}
                 />
                 <Stack.Screen
-                    name="Gender"
-                    component={GenderQuestion}
-                    options={{ title: "Gender" }}
+                    name="Values"
+                    component={Values}
+                    options={{ title: "Value" }}
                 />
                 <Stack.Screen
-                    name="Age"
-                    component={AgeQuestion}
-                    options={{ title: "Age" }}
-                />
-                <Stack.Screen
-                    name="About"
-                    component={About}
-                    options={{ title: "About" }}
-                />
-                <Stack.Screen
-                    name="Profile"
-                    component={Profile}
-                    options={{ title: "Profile" }}
+                    name="ChatList"
+                    component={ChatList}
+                    options={{ title: "ChatList" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
