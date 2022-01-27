@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
+import {useNavigation} from "@react-navigation/native";
+
 import {Button} from '../components/Button';
 
-export default function NameQuestion({ navigation}) { 
+import AgeQuestion from "./AgeQuestion";
+
+export default function NameQuestion() {
+    const navigation = useNavigation();
     const [name, setName] = useState('');
     const [haveName, setHaveName] = useState(false);
 
@@ -11,8 +16,9 @@ export default function NameQuestion({ navigation}) {
     const onPress = () => {
         if (name.trim().length > 1 && !haveName) {
             setHaveName(true);
-        } else {
-            navigation.navigate("Age");
+        }
+        else {
+            navigation.navigate("AgeQuestion");
         }
     }
 

@@ -16,7 +16,7 @@ export default function Craving ({navigation}) {
           <Checkbox answer = "I'm not sure yet"/>
         </View>
           <View style={styles.containerButton}>
-            <Button onPress={() => navigation.navigate("Value")}>
+            <Button onPress={() => navigation.navigate("Value")}>Continue
             </Button>
           </View>
       </View>

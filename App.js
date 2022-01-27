@@ -3,26 +3,13 @@ import { View, Text, LogBox } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Home from "./Screens/Home";
-import Craving from "./Screens/Craving_Screen";
-import Value from "./Screens/Values_Screen";
-import Match from "./Screens/Math_Gender";
-import Orientation from "./Screens/Sexual_Orientation_Screen";
-import About from "./Screens/About_Me";
-import Profile from "./Screens/Profile";
 import Login from "./Screens/Login";
 import EnterEmail from "./Screens/EnterEmail";
 import EnterEmailCode from "./Screens/EnterEmailCode";
-import Message from "./Screens/Message";
+import Values from "./Screens/Values_Screen";
 import ChatList from "./Screens/ChatList";
-import Interests from "./Screens/Interests";
 
 import SplashScreen from "./Screens/SplashScreen";
-
-import NameQuestion from "./Screens/NameQuestion";
-import GenderQuestion from "./Screens/GenderQuestion";
-import AgeQuestion from "./Screens/AgeQuestion";
-
 import OnBoarding from "./Screens/OnBoarding";
 import MainContainer from "./Navigation/MainContainer";
 
@@ -31,22 +18,7 @@ const Stack = createNativeStackNavigator();
 function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen
-                    name="Home"
-                    component={MainContainer}
-                    options={{ title: "Home" }}
-                />
-                <Stack.Screen
-                    name="EnterEmail"
-                    component={EnterEmail}
-                    options={{ title: "Enter Email" }}
-                />
-                <Stack.Screen
-                    name="EnterEmailCode"
-                    component={EnterEmailCode}
-                    options={{ title: "Enter 6-digit code" }}
-                />
+            <Stack.Navigator initialRouteName="SplashScreen">
                 <Stack.Screen
                     name="SplashScreen"
                     component={SplashScreen}
@@ -63,39 +35,29 @@ function App() {
                     options={{title: "Login"}}
                 />
                 <Stack.Screen
-                    name="MatchPreference"
-                    component={MatchPreference}
-                    options={{ title: "MatchPreference" }}
+                    name="MainContainer"
+                    component={MainContainer}
+                    options={{title: "MainContainer"}}
                 />
                 <Stack.Screen
-                    name="Name"
-                    component={NameQuestion}
-                    options={{ title: "Name" }}
+                    name="EnterEmail"
+                    component={EnterEmail}
+                    options={{ title: "Enter Email" }}
                 />
                 <Stack.Screen
-                    name="Gender"
-                    component={GenderQuestion}
-                    options={{ title: "Gender" }}
+                    name="EnterEmailCode"
+                    component={EnterEmailCode}
+                    options={{ title: "Enter 6-digit code" }}
                 />
                 <Stack.Screen
-                    name="Age"
-                    component={AgeQuestion}
-                    options={{ title: "Age" }}
+                    name="Values"
+                    component={Values}
+                    options={{ title: "Value" }}
                 />
                 <Stack.Screen
-                    name="About"
-                    component={About}
-                    options={{ title: "About" }}
-                />
-                <Stack.Screen
-                    name="Profile"
-                    component={Profile}
-                    options={{ title: "Profile" }}
-                />
-                <Stack.Screen
-                    name="Interests"
-                    component={Interests}
-                    options={{ title: "Interests" }}
+                    name="ChatList"
+                    component={ChatList}
+                    options={{ title: "ChatList" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>

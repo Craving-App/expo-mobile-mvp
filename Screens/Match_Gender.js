@@ -6,7 +6,7 @@ import {Button} from '../components/Button';
 import {Checkbox} from '../components/CheckBox';
 
 
-export default function Gender ({navigation}) {
+export default function Matches ({navigation}) {
   return (
     <View style={styles.container}>
         <Text style={styles.question}> Who are you looking for ? </Text>

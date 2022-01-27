@@ -5,8 +5,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from "../Screens/Home"
 import Profile from "../Screens/Profile"
 import Message from "../Screens/Message"
-import Match from "../Screens/Match"
 import Setting from "../Screens/Setting"
+import Matches from "../Screens/Match_Gender";
 
 // Screen Names
 const homeName = 'Home'
@@ -46,7 +46,7 @@ const MainContainer = ({navigation}) => {
         >
             <Tab.Screen name={homeName} component={Home} />
             <Tab.Screen name={messName} component={Message} initialParams={{ name: "Message" }}/>
-            <Tab.Screen name={matchName} component={Match}/>
+            <Tab.Screen name={matchName} component={Matches}/>
             <Tab.Screen name={setName} component={Setting}/>
             <Tab.Screen name={profName} component={Profile} />
         </Tab.Navigator>

@@ -13,6 +13,7 @@ import Chats from "../dummydata/Chats";
 import { StatusBar } from "expo-status-bar";
 import tailwind from "tailwind-rn";
 import newmatches from "../dummydata/Newmatches";
+
 const ChatList = ({ navigation }) => {
   return (
     <SafeAreaView style={Styles.AndroidSafeArea}>

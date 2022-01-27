@@ -11,6 +11,7 @@ import {
 
 import { SocialIcon } from 'react-native-elements'
 
+import MainContainer from "../Navigation/MainContainer";
 
 const Login = ({ navigation }) => {
     return (
@@ -23,7 +24,8 @@ const Login = ({ navigation }) => {
                 />
             </View>
             <View style={styles.footer}>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button}
+                                  onPress={() => navigation.navigate("MainContainer")}>
                     <Text style={styles.btnText}>Log In</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button}>

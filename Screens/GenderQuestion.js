@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Picker, StyleSheet, Text } from 'react-native';
 import {Button} from '../components/Button';
 
+import Orientation from "./Sexual_Orientation_Screen";
+
 export default function GenderQuestion({navigation}) { 
     const [gender, setGender] = useState('Cis Male');
     const genders = ['Cis Male', 'Cis Woman', 'Masc Nonbinary', 'Femme Nonbinary', 'Nonbinary', 'Trans Man', 'Trans Woman'];
@@ -19,7 +21,7 @@ export default function GenderQuestion({navigation}) {
                     <Picker.Item label={gender} value={gender} key={idx}/>
                     )}  
                 </Picker>
-              <Button text="Continue" onPressHandler={onPress} />
+                <Button onPressHandler={onPress}>Continue</Button>
             </View>
     );
 };

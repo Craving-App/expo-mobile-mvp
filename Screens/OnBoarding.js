@@ -2,19 +2,19 @@ import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Animated, SafeAreaView, StatusBar, Pressable} from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import FirstName from "./FirstName";
-import Birthday from "./Birthday";
-import Gender from "./Math_Gender";
+import NameQuestion from "./NameQuestion";
+import AgeQuestion from "./AgeQuestion";
+import GenderQuestion from "./GenderQuestion";
 import Orientation from "./Sexual_Orientation_Screen";
-import Intention from "./Intention";
+import Craving from "./Craving_Screen";
 import AboutMe from "./About_Me";
 import Interests from "./Interests";
 import FacialRecog from "./Facial_Recog";
 
 const OnBoarding = ({navigation}) => {
     const allQues = [
-        {screen: <FirstName />}, {screen: <Birthday />}, {screen: <Gender />},
-        {screen: <Orientation />}, {screen: <Intention />}, {screen: <AboutMe />},
+        {screen: <NameQuestion />}, {screen: <AgeQuestion />}, {screen: <GenderQuestion />},
+        {screen: <Orientation />}, {screen: <Craving />}, {screen: <AboutMe />},
         {screen: <Interests />}, {screen: <FacialRecog />}
     ];
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -92,7 +92,7 @@ const OnBoarding = ({navigation}) => {
     }
 
     return (
-        <SafeAreaView style={{flex: 2}}>
+        <SafeAreaView style={{flex: 1}}>
             <StatusBar barStyle="light-content" backgroundColor='black' />
             <View style={{
                 paddingTop: 30,
