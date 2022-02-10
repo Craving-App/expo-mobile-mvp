@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import FirstName from "./FirstName";
 import Birthday from "./Birthday";
-import Gender from "./Math_Gender";
+import Gender from "./Match_Gender";
 import Orientation from "./Sexual_Orientation_Screen";
 import Intention from "./Intention";
 import AboutMe from "./About_Me";

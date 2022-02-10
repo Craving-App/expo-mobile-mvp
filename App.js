@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Screens/Home";
 import Craving from "./Screens/Craving_Screen";
 import Value from "./Screens/Values_Screen";
-import Match from "./Screens/Math_Gender";
+import Match from "./Screens/Match_Gender";
 import Orientation from "./Screens/Sexual_Orientation_Screen";
 import About from "./Screens/About_Me";
 import Profile from "./Screens/Profile";
@@ -63,9 +63,9 @@ function App() {
                     options={{title: "Login"}}
                 />
                 <Stack.Screen
-                    name="MatchPreference"
-                    component={MatchPreference}
-                    options={{ title: "MatchPreference" }}
+                    name="Match"
+                    component={Match}
+                    options={{ title: "Match" }}
                 />
                 <Stack.Screen
                     name="Name"
