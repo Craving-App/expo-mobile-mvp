@@ -25,6 +25,11 @@ export default function Home({ navigation }) {
             <Text onPress={() => navigation.navigate("EnterEmail")}>
                 Click to enter email
             </Text>
+
+ {/* testing */}
+            <Text onPress={() => navigation.navigate("Preferences")}>
+                What are your Preferences?
+            </Text>
             
             
         </View>

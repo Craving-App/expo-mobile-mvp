@@ -16,6 +16,7 @@ import EnterEmailCode from "./Screens/EnterEmailCode";
 import Message from "./Screens/Message";
 import ChatList from "./Screens/ChatList";
 import Interests from "./Screens/Interests";
+import Preferences from "./Screens/Preferences";
 
 import SplashScreen from "./Screens/SplashScreen";
 
@@ -96,6 +97,11 @@ function App() {
                     name="Interests"
                     component={Interests}
                     options={{ title: "Interests" }}
+                />
+                <Stack.Screen
+                    name="Preferences"
+                    component={Preferences}
+                    options={{ title: "Preferences" }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
